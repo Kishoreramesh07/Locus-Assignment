@@ -1,0 +1,16 @@
+baseurl: "Locus-Assignment"
+
+sass:
+    load_paths:
+        - _sass
+        - node_modules
+
+collections:
+  banner-section:
+  section-titles:
+  case-study:
+  why-us-cards:
+  locusteam:
+      output: true
+      
+exclude: []

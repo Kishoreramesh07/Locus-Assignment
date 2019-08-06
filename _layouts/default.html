@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <!-- site css -->
+      <link rel="icon" type="image/png" href="{{'/assets/images/favicon.png'}}" />
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
+      <link rel="stylesheet" href="{{'/assets/style.css' | prepend: site.baseurl}}">
+      <link rel="stylesheet" href="{{'/assets/responsive.css' | prepend: site.baseurl}}">
+      <title>{{page.title}}</title>
+   </head>
+   <body>
+      <header>
+         <!--Header Top Navigation start-->
+         <div class="top-nav d-sm-none d-none d-md-block">
+            <div class="container-fluid">
+               <ul class="nav justify-content-end">
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Call us now:</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="tel:+919663753844"><img src={{ "/assets/images/ind-flag.png"}}> India: +91 966 375 3844</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="tel:+18030160205"><img src={{ "/assets/images/usa-flag.png"}}> USA: +1 803 016 0205</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="tel:+18663739004"><img src={{ "/assets/images/indo-flag.png"}}> Indonesia: +1 866 373 9004</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         <!--Header Top Navigation End-->
+         <!-- Navigation start-->
+         <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="container-fluid">
+               <a class="navbar-brand locus-logo" href="#"><img src={{ "/assets/images/locus-logo.svg"}}  class="img-fluid"></a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse ml-auto  justify-content-end" id="collapsibleNavbar">
+                  <ul class="navbar-nav">
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Business Sectors</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">API</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Resources</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Company</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="demo-btn" href="#">SCHEDULE A DEMO</a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </nav>
+         <!-- Navigation End-->
+      </header>
+      {{ content }}
+   </body>
+   <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
+   <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
+   <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script> 
+   <script src="{{ base.url | prepend: site.url }}/assets/js/validate-form.js"></script>
+</html>

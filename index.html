@@ -1,0 +1,170 @@
+---
+layout : default
+title: Locus
+---
+<!-- Banner Section start-->
+<section class="banner-section">
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-7 banner-left">
+            {% for item in site.banner-section %}
+            <h1>{{ item.banner-title}}</h1>
+            <div class="banner-list-sec">
+               {{ item.content}}
+            </div>
+            {% endfor %}
+         </div>
+         <div class="offset-md-1 col-md-4 banner-right">
+            <div class="form-sec">
+               <h5 class="text-center">Schedule a Demo call with our Strategic Consultant</h5>
+               <form action="" class="needs-validation" novalidate>
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="name" name="name"  placeholder="Name*" required>
+                     <div class="invalid-feedback">Please enter your name</div>
+                  </div>
+                  <div class="form-group">
+                     <input type="email" class="form-control" id="email" name="email"  placeholder="Business e-mail*" required>
+                     <div class="invalid-feedback">Please enter your business e-mail</div>
+                  </div>
+                  <div class="form-group">
+                     <input type="tel" class="form-control" id="number" name="number"  placeholder="Contact number*" required>
+                     <div class="invalid-feedback">Please enter your contact number</div>
+                  </div>
+                  <div class="form-group">
+                     <input type="text" class="form-control" id="industry" name="industry"  placeholder="Industry*" required>
+                     <div class="invalid-feedback">Please enter your industry</div>
+                  </div>
+                  <div class="form-btn text-center">
+                     <button type="submit" class="btn btn-primary btn-color">SUBMIT</button>
+                  </div>
+               </form>
+               <p  class="form-terms text-center">By clicking submit, you are providing us with your consent to communicate via email or phone, regarding the demo you have requested.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+</section>
+<!-- Banner Section End-->
+<!--Client Section Start-->
+<section>
+   <div class="container-fluid">
+      <div class="row">
+         <div class="col-md-12">
+            <video width="100%" height="180" autoplay>
+               <source src={{"assets/images/Logos-Video.mp4"}} type="video/mp4">
+            </video>
+         </div>
+      </div>
+   </div>
+</section>
+<!--Client Section End-->
+<!--Why Us & Case Study Start-->
+<section class="why-us-section">
+   <div class="container-fluid">
+      <div class="row text-center">
+         {% for item in site.section-titles limit:1 %}
+         <div class="col-md-12">
+            <h3 class="title">{{ item.main-title}}</h3>
+         </div>
+         <div class="col-md-12">
+            <h5 class="sub-tittle">{{ item.sub-title}}</h5>
+         </div>
+         {% endfor %}
+      </div>
+   </div>
+   <div class="cards-carousel-bg">
+      <div class="container-fluid">
+         <div class="row">
+            {% for item in site.why-us-cards %}
+            <div class="col-md-4">
+               <div class="card-sec text-center d-sm-none d-none d-md-block">
+                  <img src="{{ item.img_path}}">
+                  <h4>{{ item.title}}</h4>
+                  {{ item.content }}
+               </div>
+               <div class="d-md-none d-lg-none d-xl-none">
+                  <div class="mobile-card">
+                     <div class="card-sec text-center">
+                        <img src="{{ item.img_path}}">
+                        <h4>{{ item.title}}</h4>
+                     </div>
+                     <div class="card-detail">
+                        {{ item.content}}
+                     </div>
+                  </div>
+               </div>
+            </div>
+            {% endfor %}
+         </div>
+         <div class="row case-study-sec">
+            <div class="col-md-12">
+               <div id="demo" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ul class="carousel-indicators">
+                     <li data-target="#demo" data-slide-to="0" class="active"></li>
+                     <li data-target="#demo" data-slide-to="1"></li>
+                  </ul>
+                  <!-- The slideshow -->
+                  <div class="carousel-inner">
+                     {% for item in site.case-study %}
+                     <div class="carousel-item {% if forloop.first == true %} active{% endif %}">
+                        <h3 class="title">{{ item.main-title}}</h3>
+                        <div class="cases">
+                           <div class="left-case-overview">
+                              <h4>{{ item.left-side-title}}</h4>
+                              <p>{{ item.left-paragraph-first}}</p>
+                              <img src="{{ item.img_path }} "class="img-fluid">
+                              <p>{{ item.left-paragraph-second}}</p>
+                           </div>
+                           <div class="right-result">
+                              <h3 class="title">{{ item.right-side-title}}</h3>
+                              {{ item.content}}
+                              <p>{{ item.right-paragraph}}</p>
+                              <div class="text-center">
+                                 <button type="submit" class="btn btn-primary btn-result">DOWNLOAD CASE STUDY</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     {% endfor%}
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   </div>
+</section>
+<!--Why Us & Case Study End-->
+<!--Team Section start-->
+<section class="team-sec">
+   <div class="container">
+      <div class="row">
+         {% for item in site.section-titles offset:1 %}
+         <div class="col-md-12">
+            <h3 class="title">{{ item.main-title}}</h3>
+         </div>
+         <div class="col-md-12 text-center">
+            <h5 class="sub-tittle">{{ item.sub-title}}</h5>
+         </div>
+         {% endfor %}
+         {% for item in site.locusteam %}
+         <div class="col-md-6">
+            <div class="met" onclick="location.href='{{ item.profile_link }}';">
+               <div class="photo">
+                  <img src="{{ item.img_path }}">
+               </div>
+               <div class="detail">
+                  <h5>{{ item.name }}</h5>
+                  <p>{{ item.detail }}</p>
+               </div>
+            </div>
+         </div>
+         {% endfor %}
+         <div class="col-md-12">
+            <a href="mailto:example@gmail.com" class="connect-btn">CONNECT WITH OUR TEAM @ ashwin@locus.sh</a>
+         </div>
+      </div>
+   </div>
+</section>
+<!--Team Section End-->
