@@ -1,4 +1,4 @@
-baseurl: "Locus-Assignment"
+baseurl: ""
 
 sass:
     load_paths:
