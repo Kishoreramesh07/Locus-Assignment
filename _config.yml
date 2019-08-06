@@ -1,4 +1,5 @@
-baseurl: "https://kishoreramesh07.github.io"
+url: kishoreramesh07.github.io
+baseurl: /Locus-Assignment
 
 sass:
     load_paths:
