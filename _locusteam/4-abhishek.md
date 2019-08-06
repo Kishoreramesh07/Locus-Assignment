@@ -1,5 +1,5 @@
 ---
-img_path: /assets/images/Abhishek.png
+img_path: /Locus-Assignment/assets/images/Abhishek.png
 name: Abhishek Roy
 detail: "Data Scientist, <br> University of Berkeley, Ph.D. University of Illinois. "
 profile_link: https://www.linkedin.com/
