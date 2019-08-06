@@ -5,7 +5,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <!-- site css -->
-      <link rel="icon" type="image/png" href="{{'/assets/images/favicon.png'}}" />
+      <link rel="icon" type="image/png" href="{{'/assets/images/favicon.png' | prepend: site.baseur}}" />
       <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="{{'/assets/main.css' | prepend: site.baseurl}}">
       <link rel="stylesheet" href="{{'/assets/style.css' | prepend: site.baseurl}}">
@@ -22,7 +22,7 @@
                      <a class="nav-link" href="#">Call us now:</a>
                   </li>
                   <li class="nav-item">
-                     <a class="nav-link" href="tel:+919663753844"><img src={{ "/assets/images/ind-flag.png"}}> India: +91 966 375 3844</a>
+                     <a class="nav-link" href="tel:+919663753844"><img src={{ "/assets/images/ind-flag.png "}}> India: +91 966 375 3844</a>
                   </li>
                   <li class="nav-item">
                      <a class="nav-link" href="tel:+18030160205"><img src={{ "/assets/images/usa-flag.png"}}> USA: +1 803 016 0205</a>
@@ -75,5 +75,5 @@
    <script src="{{'/node_modules/jquery/dist/jquery.min.js' | prepend: site.baseurl}}"></script>
    <script src="{{'/node_modules/popper.js/dist/umd/popper.min.js' | prepend: site.baseurl}}"></script>
    <script src="{{'/node_modules/bootstrap/dist/js/bootstrap.min.js' | prepend: site.baseurl}}"></script> 
-   <script src="{{ base.url | prepend: site.url }}/assets/js/validate-form.js"></script>
+   <script src="{{ '/assets/js/validate-form.js' | prepend: site.url}}"></script>
 </html>
